@@ -10,6 +10,11 @@ import { LandingContentComponent } from './components/landing/landing-content/la
 import { LoaderComponent } from './components/loader/loader.component';
 import { TextEditorComponent } from './components/create-story/text-editor/text-editor.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AboutUsComponent } from './components/pages/about-us/about-us.component';
+import { LandingComponent } from './components/pages/landing/landing.component';
+import { AboutUsContentComponent } from './components/landing/about-us-content/about-us-content.component';
+import { FooterComponent } from './components/landing/footer/footer.component';
+import { FooterLandingComponent } from './components/landing/footer-landing/footer-landing.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NavbarLandingLinksComponent,
     LandingContentComponent,
     LoaderComponent,
-    TextEditorComponent
+    TextEditorComponent,
+    AboutUsComponent,
+    LandingComponent,
+    AboutUsContentComponent,
+    FooterComponent,
+    FooterLandingComponent
   ],
   imports: [
     BrowserModule,
