@@ -1,0 +1,149 @@
+body {
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.container {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  margin: 120px 10px;
+  border-radius: 25%;
+}
+
+#box-1 {
+  background: limegreen;
+  animation: animate-1 5s forwards infinite ease;
+  opacity: 0.7;
+}
+
+#box-2 {
+    background: deeppink;
+    animation: animate-2 5s forwards infinite ease;
+    opacity: 0.7;
+}
+
+#box-3 {
+    background: slateblue;
+    animation: animate-3 5s forwards infinite ease;
+    opacity: 0.7;
+}
+
+#box-4 {
+    background: orange;
+    animation: animate-4 5s forwards infinite ease;
+    opacity: 0.7;
+}
+
+@keyframes animate-1{
+  0% {
+    background: limegreen;
+    border-radius: 25%;
+  }
+  20% {
+    background: orange;
+    border-radius: 50% 25% 25% 25%;
+  }
+  40% {
+    background: slateblue;
+    border-radius: 50% 50% 25% 25%;
+  }
+  50% {
+    transform:rotate(180deg);
+  }
+  60% {
+    background: deeppink;
+    border-radius: 50% 50% 50% 25%;
+  }
+  80% {
+    background: limegreen;
+    border-radius: 50% 50% 50% 50%;
+  }
+}
+
+@keyframes animate-2{
+  0% {
+    background: deeppink;
+    border-radius: 25%;
+  }
+  20% {
+    background: limegreen;
+    border-radius: 50% 25% 25% 25%;
+  }
+  40% {
+    background: orange;
+    border-radius: 50% 50% 25% 25%;
+  }
+  50% {
+    margin:120px;
+    transform:rotate(-180deg);
+  }
+  60% {
+    background: slateblue;
+    border-radius: 50% 50% 50% 25%;
+  }
+  80% {
+    background: deeppink;
+    border-radius: 50% 50% 50% 50%;
+  }
+}
+
+@keyframes animate-3{
+  0% {
+    background: slateblue;
+    border-radius: 25%;
+  }
+  20% {
+    background: deeppink;
+    border-radius: 50% 25% 25% 25%;
+  }
+  40% {
+    background: limegreen;
+    border-radius: 50% 50% 25% 25%;
+  }
+  50% {
+     margin-right:120px;
+     transform: rotate(180deg);
+  }
+  60% {
+    background: orange;
+    border-radius: 50% 50% 50% 25%;
+  }
+  80% {
+    background: slateblue;
+    border-radius: 50% 50% 50% 50%;
+  }
+}
+
+@keyframes animate-4{
+  0% {
+    background: orange;
+    border-radius: 25%;
+  }
+  20% {
+    background: slateblue;
+    border-radius: 50% 25% 25% 25%;
+  }
+  40% {
+    background: deeppink;
+    border-radius: 50% 50% 25% 25%;
+  }
+  50% {
+    transform:rotate(-180deg);
+  }
+  60% {
+    background: limegreen;
+    border-radius: 50% 50% 50% 25%;
+  }
+  80% {
+    background: orange;
+    border-radius: 50% 50% 50% 50%;
+  }
+}
