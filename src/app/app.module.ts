@@ -15,6 +15,10 @@ import { LandingComponent } from './components/pages/landing/landing.component';
 import { AboutUsContentComponent } from './components/landing/about-us-content/about-us-content.component';
 import { FooterComponent } from './components/landing/footer/footer.component';
 import { FooterLandingComponent } from './components/landing/footer-landing/footer-landing.component';
+import { SignupFormComponent } from './components/landing/signup-form/signup-form.component';
+import { LoginFormComponent } from './components/landing/login-form/login-form.component';
+import { SignupComponent } from './components/pages/signup/signup.component';
+import { LoginComponent } from './components/pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { FooterLandingComponent } from './components/landing/footer-landing/foot
     LandingComponent,
     AboutUsContentComponent,
     FooterComponent,
-    FooterLandingComponent
+    FooterLandingComponent,
+    SignupFormComponent,
+    LoginFormComponent,
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
