@@ -17,7 +17,6 @@ export class SignupFormComponent implements OnInit {
     const background = document.querySelector('.login-container');
 
     const window: number = document.body.clientWidth;
-    console.log(window);
     if (window > 768) {
       background.classList.add('bgsignup');
       background.classList.remove('bg-none');

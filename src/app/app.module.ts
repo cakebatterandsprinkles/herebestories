@@ -32,6 +32,8 @@ import { ReadComponent } from './components/pages/read/read.component';
 import { MainCardComponent } from './components/main/main-card/main-card.component';
 import { WriteComponent } from './components/pages/write/write.component';
 import { MainWelcomeComponent } from './components/main/main-welcome/main-welcome.component';
+import { MainPromptComponent } from './components/main/main-prompt/main-prompt.component';
+import { MainChronometerComponent } from './components/main/main-chronometer/main-chronometer.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { MainWelcomeComponent } from './components/main/main-welcome/main-welcom
     ReadComponent,
     MainCardComponent,
     WriteComponent,
-    MainWelcomeComponent
+    MainWelcomeComponent,
+    MainPromptComponent,
+    MainChronometerComponent
   ],
   imports: [
     BrowserModule,
