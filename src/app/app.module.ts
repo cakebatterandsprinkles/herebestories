@@ -34,6 +34,7 @@ import { WriteComponent } from './components/pages/write/write.component';
 import { MainWelcomeComponent } from './components/main/main-welcome/main-welcome.component';
 import { MainPromptComponent } from './components/main/main-prompt/main-prompt.component';
 import { MainChronometerComponent } from './components/main/main-chronometer/main-chronometer.component';
+import { MainPaginationComponent } from './components/main/main-pagination/main-pagination.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { MainChronometerComponent } from './components/main/main-chronometer/mai
     WriteComponent,
     MainWelcomeComponent,
     MainPromptComponent,
-    MainChronometerComponent
+    MainChronometerComponent,
+    MainPaginationComponent
   ],
   imports: [
     BrowserModule,
