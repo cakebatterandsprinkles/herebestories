@@ -17,5 +17,8 @@ html, body {
 body {
     min-height:100%;
     position:relative;
-    padding-bottom: 60px;
+}
+
+.wrapper {
+  min-height: calc(100vh - 60px);
 }

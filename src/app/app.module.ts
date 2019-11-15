@@ -13,12 +13,26 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
 import { LandingComponent } from './components/pages/landing/landing.component';
 import { AboutUsContentComponent } from './components/landing/about-us-content/about-us-content.component';
-import { FooterComponent } from './components/landing/footer/footer.component';
 import { FooterLandingComponent } from './components/landing/footer-landing/footer-landing.component';
 import { SignupFormComponent } from './components/landing/signup-form/signup-form.component';
 import { LoginFormComponent } from './components/landing/login-form/login-form.component';
 import { SignupComponent } from './components/pages/signup/signup.component';
 import { LoginComponent } from './components/pages/login/login.component';
+import { MainNavbarComponent } from './components/main/main-navbar/main-navbar.component';
+import { MainFooterComponent } from './components/main/main-footer/main-footer.component';
+import { MainDashboardGridComponent } from './components/main/main-dashboard-grid/main-dashboard-grid.component';
+import { MainProfilePageComponent } from './components/main/main-profile-page/main-profile-page.component';
+import { MainSettingsComponent } from './components/main/main-settings/main-settings.component';
+import { MainWritingPromptComponent } from './components/main/main-writing-prompt/main-writing-prompt.component';
+import { MainStoryViewComponent } from './components/main/main-story-view/main-story-view.component';
+import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
+import { ProfileComponent } from './components/pages/profile/profile.component';
+import { SettingsComponent } from './components/pages/settings/settings.component';
+import { CreateComponent } from './components/pages/create/create.component';
+import { ReadComponent } from './components/pages/read/read.component';
+import { MainCardsComponent } from './components/main/main-cards/main-cards.component';
+import { MainCardComponent } from './components/main/main-card/main-card.component';
+import { WriteComponent } from './components/pages/write/write.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +45,26 @@ import { LoginComponent } from './components/pages/login/login.component';
     AboutUsComponent,
     LandingComponent,
     AboutUsContentComponent,
-    FooterComponent,
     FooterLandingComponent,
     SignupFormComponent,
     LoginFormComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    MainNavbarComponent,
+    MainFooterComponent,
+    MainDashboardGridComponent,
+    MainProfilePageComponent,
+    MainSettingsComponent,
+    MainWritingPromptComponent,
+    MainStoryViewComponent,
+    DashboardComponent,
+    ProfileComponent,
+    SettingsComponent,
+    CreateComponent,
+    ReadComponent,
+    MainCardsComponent,
+    MainCardComponent,
+    WriteComponent
   ],
   imports: [
     BrowserModule,

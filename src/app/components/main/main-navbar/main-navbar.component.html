@@ -1,0 +1,26 @@
+<header class="absolute nav w-full pt-4 px-6 pb-2 flex justify-between">
+  <div class="w-40">
+    <a routerLink="/"><img src="assets/images/logo.svg" alt="logo" ></a>
+  </div>
+  <div class="h-8 flex justify-between items-center">
+    <button type="button" class="focus:outline-none w-8 inline sm:hidden">
+      <img src="assets/images/burger.svg" alt="burger icon">
+    </button>
+    <div  class="hidden sm:block">
+        <div class="links flex flex-row content-center">
+            <div class="pr-6 hover:text-pink-500 focus:shadow-outline focus:outline-none">
+                <a routerLink="/Dashboard" routerLinkActive="text-pink-500 font-bold">Dashboard</a>
+            </div>
+            <div class="pr-6 hover:text-pink-500 focus:shadow-outline focus:outline-none">
+                <a routerLink="/Write" routerLinkActive="text-pink-500 font-bold">Write</a>
+            </div>
+            <div class="pr-6 hover:text-pink-500 focus:shadow-outline focus:outline-none">
+                <a routerLink="/Profile" routerLinkActive="text-pink-500 font-bold">Profile</a>
+            </div>
+            <div class="pr-6 hover:text-pink-500 focus:shadow-outline focus:outline-none">
+                <a routerLink="/Settings" routerLinkActive="text-pink-500 font-bold">Settings</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</header>
