@@ -11,7 +11,7 @@ export class MainCardComponent implements OnInit {
   chosenUrl: string;
 
   ngOnInit() {
-    const images: any[] = ['card1', 'card2', 'card3', 'card4', 'card5', 'card6', 'card7', 'card8'];
+    const images: any[] = ['card1', 'card2', 'card3', 'card4', 'card5', 'card6', 'card7', 'card8', 'card9'];
 
     const num = Math.floor(Math.random() * images.length);
     this.chosenImage = images[num];

@@ -28,11 +28,10 @@ import { MainStoryViewComponent } from './components/main/main-story-view/main-s
 import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 import { ProfileComponent } from './components/pages/profile/profile.component';
 import { SettingsComponent } from './components/pages/settings/settings.component';
-import { CreateComponent } from './components/pages/create/create.component';
 import { ReadComponent } from './components/pages/read/read.component';
-import { MainCardsComponent } from './components/main/main-cards/main-cards.component';
 import { MainCardComponent } from './components/main/main-card/main-card.component';
 import { WriteComponent } from './components/pages/write/write.component';
+import { MainWelcomeComponent } from './components/main/main-welcome/main-welcome.component';
 
 @NgModule({
   declarations: [
@@ -60,11 +59,10 @@ import { WriteComponent } from './components/pages/write/write.component';
     DashboardComponent,
     ProfileComponent,
     SettingsComponent,
-    CreateComponent,
     ReadComponent,
-    MainCardsComponent,
     MainCardComponent,
-    WriteComponent
+    WriteComponent,
+    MainWelcomeComponent
   ],
   imports: [
     BrowserModule,
