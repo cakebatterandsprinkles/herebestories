@@ -23,7 +23,6 @@ import { MainFooterComponent } from './components/main/main-footer/main-footer.c
 import { MainDashboardGridComponent } from './components/main/main-dashboard-grid/main-dashboard-grid.component';
 import { MainProfilePageComponent } from './components/main/main-profile-page/main-profile-page.component';
 import { MainSettingsComponent } from './components/main/main-settings/main-settings.component';
-import { MainWritingPromptComponent } from './components/main/main-writing-prompt/main-writing-prompt.component';
 import { MainStoryViewComponent } from './components/main/main-story-view/main-story-view.component';
 import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 import { ProfileComponent } from './components/pages/profile/profile.component';
@@ -35,6 +34,7 @@ import { MainWelcomeComponent } from './components/main/main-welcome/main-welcom
 import { MainPromptComponent } from './components/main/main-prompt/main-prompt.component';
 import { MainChronometerComponent } from './components/main/main-chronometer/main-chronometer.component';
 import { MainPaginationComponent } from './components/main/main-pagination/main-pagination.component';
+import { MainWritingContentComponent } from './components/main/main-writing-content/main-writing-content.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +57,6 @@ import { MainPaginationComponent } from './components/main/main-pagination/main-
     MainDashboardGridComponent,
     MainProfilePageComponent,
     MainSettingsComponent,
-    MainWritingPromptComponent,
     MainStoryViewComponent,
     DashboardComponent,
     ProfileComponent,
@@ -68,7 +67,8 @@ import { MainPaginationComponent } from './components/main/main-pagination/main-
     MainWelcomeComponent,
     MainPromptComponent,
     MainChronometerComponent,
-    MainPaginationComponent
+    MainPaginationComponent,
+    MainWritingContentComponent
   ],
   imports: [
     BrowserModule,
