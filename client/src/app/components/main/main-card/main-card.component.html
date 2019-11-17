@@ -1,19 +1,26 @@
 <div class="max-w-lg rounded rounded-xl overflow-hidden shadow-lg bg-white m-4">
-    <div class="px-6 py-4">
-      <p><span class="text-purple-500 font-bold">Prompt: </span><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quae!</strong></p>
-    </div>
-    <hr>
-    <div class="px-6 py-4">
-      <p class="text-gray-700 text-sm sm:text-base text-justify fading leading-tight">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsam ab temporibus corrupti quos dolorem ipsa id, beatae voluptatibus ut cupiditate explicabo alias ea laborum maiores sequi deleniti odio! Amet harum asperiores velit quaerat, consectetur aut minima ipsum distinctio molestias rem recusandae at accusamus inventore eum blanditiis ipsam, hic eligendi!
-      </p>
-    </div>
-    <div class="px-6 pb-4 flex justify-end items-center">
-      <div>
-        <p><span class="text-pink-500 hover:underline text-sm sm:text-base">cakebatterandsprinkles</span>
-          <br/><span class="text-xs sm:text-sm"> Jun 15, 2015, 9:03:01 AM</span></p>
-      </div>
-      <img class="h-16 sm:h-24 chosen-image pl-4" [src]="chosenUrl" alt="funny image on card">
-
-    </div>
+  <div class="px-6 py-4">
+    <p><span class="text-purple-500 font-bold">Prompt: </span><strong>Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Laudantium, quae!</strong></p>
   </div>
+  <hr>
+  <div class="px-6 py-4">
+    <p class="text-gray-700 text-sm sm:text-base text-justify fading leading-tight">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsam ab temporibus corrupti quos dolorem ipsa id,
+      beatae voluptatibus ut cupiditate explicabo alias ea laborum maiores sequi deleniti odio! Amet harum asperiores
+      velit quaerat, consectetur aut minima ipsum distinctio molestias rem recusandae at accusamus inventore eum
+      blanditiis ipsam, hic eligendi!
+    </p>
+  </div>
+  <div class="px-6 pb-4 flex justify-end items-center">
+    <div>
+      <p><span class="text-pink-500 hover:underline text-sm sm:text-base">cakebatterandsprinkles</span>
+        <br /><span class="text-xs sm:text-sm"> Jun 15, 2015, 9:03:01 AM</span></p>
+      <div class="flex flex-row mt-1 items-baseline">
+        <img class="h-4 mr-2" (click)="onClick()" [src]="chosenLikeImg" alt="like heart button">
+        <p class="text-xs sm:text-sm"><span class="like-count">{{likeCount}}</span> likes</p>
+      </div>
+    </div>
+    <img class="h-16 sm:h-24 chosen-image pl-4" [src]="chosenUrl" alt="funny image on card">
+  </div>
+</div>
