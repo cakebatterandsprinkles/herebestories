@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Card } from '../../../_models/Card';
 
 @Component({
   selector: 'app-main-card',
@@ -10,6 +11,14 @@ export class MainCardComponent implements OnInit {
   chosenUrl: string;
   chosenLikeImg: string;
   likeCount = 0;
+
+  card: Card = {
+    prompt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quae!',
+    story: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsam ab temporibus corrupti quos dolorem ipsa id, beatae voluptatibus ut cupiditate explicabo alias ea laborum maiores sequi deleniti odio! Amet harum asperiores velit quaerat, consectetur aut minima ipsum distinctio molestias rem recusandae at accusamus inventore eum blanditiis ipsam, hic eligendi!',
+    username: 'cakebatterandsprinkles',
+    likes: 0,
+    date: new Date()
+  };
 
 
   onClick() {
@@ -23,16 +32,15 @@ export class MainCardComponent implements OnInit {
   }
 
   ngOnInit() {
+
     const images: any[] = [
-      'card1',
-      'card2',
-      'card3',
-      'card4',
-      'card5',
-      'card6',
-      'card7',
-      'card8',
-      'card9'
+      'card11',
+      'card12',
+      'card13',
+      'card14',
+      'card15',
+      'card16',
+      'card17'
     ];
 
     const num = Math.floor(Math.random() * images.length);

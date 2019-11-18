@@ -36,6 +36,7 @@ import { MainChronometerComponent } from './components/main/main-chronometer/mai
 import { MainPaginationComponent } from './components/main/main-pagination/main-pagination.component';
 import { MainWritingContentComponent } from './components/main/main-writing-content/main-writing-content.component';
 import { MainCountrySelectComponent } from './components/main/main-country-select/main-country-select.component';
+import { MainProfileInfoComponent } from './components/main/main-profile-info/main-profile-info.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { MainCountrySelectComponent } from './components/main/main-country-selec
     MainChronometerComponent,
     MainPaginationComponent,
     MainWritingContentComponent,
-    MainCountrySelectComponent
+    MainCountrySelectComponent,
+    MainProfileInfoComponent
   ],
   imports: [
     BrowserModule,
