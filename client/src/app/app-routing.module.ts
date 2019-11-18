@@ -40,7 +40,7 @@ const routes: Routes = [
     path: 'read',
     component: ReadComponent
   }, {
-    path: '404',
+    path: '**',
     component: Notfound404Component
   }
 ];

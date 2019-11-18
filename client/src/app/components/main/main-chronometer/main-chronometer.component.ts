@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './main-chronometer.component.html',
   styleUrls: ['./main-chronometer.component.scss']
 })
+
 export class MainChronometerComponent implements OnInit {
 
   constructor() { }

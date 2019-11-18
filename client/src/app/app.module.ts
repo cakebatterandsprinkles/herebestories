@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { QuillModule } from 'ngx-quill';
+import { CountdownModule } from 'ngx-countdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,6 +40,7 @@ import { MainCountrySelectComponent } from './components/main/main-country-selec
 import { MainProfileInfoComponent } from './components/main/main-profile-info/main-profile-info.component';
 import { Notfound404Component } from './components/pages/notfound404/notfound404.component';
 import { NotFoundContentComponent } from './components/not-found/not-found-content/not-found-content.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -80,10 +82,12 @@ import { NotFoundContentComponent } from './components/not-found/not-found-conte
   ],
   imports: [
     BrowserModule,
+    CountdownModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    QuillModule.forRoot()
+    QuillModule.forRoot(),
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
