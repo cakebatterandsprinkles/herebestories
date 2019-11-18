@@ -37,6 +37,8 @@ import { MainPaginationComponent } from './components/main/main-pagination/main-
 import { MainWritingContentComponent } from './components/main/main-writing-content/main-writing-content.component';
 import { MainCountrySelectComponent } from './components/main/main-country-select/main-country-select.component';
 import { MainProfileInfoComponent } from './components/main/main-profile-info/main-profile-info.component';
+import { Notfound404Component } from './components/pages/notfound404/notfound404.component';
+import { NotFoundContentComponent } from './components/not-found/not-found-content/not-found-content.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +74,9 @@ import { MainProfileInfoComponent } from './components/main/main-profile-info/ma
     MainPaginationComponent,
     MainWritingContentComponent,
     MainCountrySelectComponent,
-    MainProfileInfoComponent
+    MainProfileInfoComponent,
+    Notfound404Component,
+    NotFoundContentComponent
   ],
   imports: [
     BrowserModule,
