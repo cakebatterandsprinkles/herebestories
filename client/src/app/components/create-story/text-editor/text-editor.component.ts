@@ -16,7 +16,7 @@ export class TextEditorComponent implements OnInit {
     });
   }
 
-  onSubmit(){
+  onSubmit() {
     console.log(this.editorForm.get('editor').value);
   }
 }
