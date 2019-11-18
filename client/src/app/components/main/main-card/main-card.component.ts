@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Card } from '../../../_models/Card';
 
 @Component({
@@ -12,13 +12,7 @@ export class MainCardComponent implements OnInit {
   chosenLikeImg: string;
   likeCount = 0;
 
-  card: Card = {
-    prompt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quae!',
-    story: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsam ab temporibus corrupti quos dolorem ipsa id, beatae voluptatibus ut cupiditate explicabo alias ea laborum maiores sequi deleniti odio! Amet harum asperiores velit quaerat, consectetur aut minima ipsum distinctio molestias rem recusandae at accusamus inventore eum blanditiis ipsam, hic eligendi!',
-    username: 'cakebatterandsprinkles',
-    likes: 0,
-    date: new Date()
-  };
+  @Input() card: Card;
 
 
   onClick() {
