@@ -6,7 +6,7 @@
     <button type="button" class="focus:outline-none w-8 inline sm:hidden">
       <img src="assets/images/burger.svg" alt="burger icon" (click)="onClick($event)">
     </button>
-    <div class="hidden sm:block">
+    <div class="hidden sm:block" *ngIf="!open">
       <div class="links flex flex-row content-center">
         <div class="pr-6 hover:font-bold focus:shadow-outline focus:outline-none">
           <a routerLink="/dashboard" routerLinkActive="text-pink-500 font-bold">Dashboard</a>
@@ -33,7 +33,7 @@
     </div>
   </div>
 </header>
-<div class="flex flex-row justify-end">
-  <div *ngIf="open" class=" w-screen h-screen bg-gray-100" (click)="onClick($event)"></div>
+<div *ngIf="open" class="flex flex-row justify-end absolute inset-0 z-10">
+  <div class=" w-screen h-screen bg-transparent" (click)="onClick($event)"></div>
   <app-main-navbar-side *ngIf="open" (click)="onClick($event)"></app-main-navbar-side>
 </div>

@@ -6,11 +6,11 @@
     <button type="button" class="focus:outline-none w-8 inline sm:hidden">
       <img src="assets/images/burger.svg" alt="burger icon" (click)="onClick($event)" *ngIf="!open">
     </button>
-    <app-navbar-landing-links class="hidden sm:block"></app-navbar-landing-links>
+    <app-navbar-landing-links class="hidden sm:block" *ngIf="!open"></app-navbar-landing-links>
   </div>
 </header>
 
-<div class="flex flex-row justify-end">
-  <div *ngIf="open" class=" w-screen h-screen bg-gray-100" (click)="onClick($event)"></div>
-  <app-navbar-side *ngIf="open" (click)="onClick($event)"></app-navbar-side>
+<div *ngIf="open" class="flex flex-row justify-end absolute inset-0 z-10">
+  <div class=" w-screen h-screen bg-transparent" (click)="onClick($event)"></div>
+  <app-navbar-side (click)="onClick($event)"></app-navbar-side>
 </div>
