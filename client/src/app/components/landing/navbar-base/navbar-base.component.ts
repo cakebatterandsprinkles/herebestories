@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar-base.component.scss']
 })
 export class NavbarBaseComponent implements OnInit {
-
+  open = false;
+  onClick() {
+    this.open = !this.open;
+  }
   constructor() { }
 
   ngOnInit() {

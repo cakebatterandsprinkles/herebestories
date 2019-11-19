@@ -41,6 +41,11 @@ import { MainProfileInfoComponent } from './components/main/main-profile-info/ma
 import { Notfound404Component } from './components/pages/notfound404/notfound404.component';
 import { NotFoundContentComponent } from './components/not-found/not-found-content/not-found-content.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarSideComponent } from './components/landing/navbar-side/navbar-side.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtInterceptor } from './_helpers/jwt.interceptor';
+import { ErrorInterceptor } from './_helpers/error.interceptor';
+import { MainNavbarSideComponent } from './components/main/main-navbar-side/main-navbar-side.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +83,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     MainCountrySelectComponent,
     MainProfileInfoComponent,
     Notfound404Component,
-    NotFoundContentComponent
+    NotFoundContentComponent,
+    NavbarSideComponent,
+    MainNavbarSideComponent
   ],
   imports: [
     BrowserModule,
@@ -89,7 +96,10 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     QuillModule.forRoot(),
     NoopAnimationsModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

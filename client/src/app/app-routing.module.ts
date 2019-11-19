@@ -10,6 +10,7 @@ import { ProfileComponent } from './components/pages/profile/profile.component';
 import { SettingsComponent } from './components/pages/settings/settings.component';
 import { ReadComponent } from './components/pages/read/read.component';
 import { Notfound404Component } from './components/pages/notfound404/notfound404.component';
+import { AuthGuard } from './_helpers/auth.guard';
 
 const routes: Routes = [
   {
