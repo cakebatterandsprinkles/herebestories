@@ -1,1 +1,1 @@
-module.exports = ['young', 'old', 'middle aged'];
+module.exports = ['young', 'old', 'middle aged', '2', '3', '5', '7', '12', '15', '18', '21', '24', '27', '31', '35', '42', '56', '67', '73', '82', '91', '95', '99', '102', '105', '110', '264', '999', '1003', 'more than 1000 but didn"t count after 1000th birthday', 'immortal'];

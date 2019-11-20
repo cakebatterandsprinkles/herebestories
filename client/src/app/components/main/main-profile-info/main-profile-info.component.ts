@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Profile } from 'src/app/_models/Profile';
 
 @Component({
@@ -8,18 +8,11 @@ import { Profile } from 'src/app/_models/Profile';
 })
 export class MainProfileInfoComponent implements OnInit {
 
-  constructor() { }
-
-  profile: Profile = {
-    username: 'cakebatterandsprinkles',
-    website: 'www.yagmurcetintas.com',
-    country: 'United States',
-    age: 28,
-    favoriteBooks: 'Harry Potter and Others',
-    interests: 'Arisi, Clay, Javascript',
-    moreInformation: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quo accusamus tempore voluptates. Vel quos architecto repudiandae consequatur, iste optio voluptates! Totam ut iure ea velit ab quidem adipisci culpa animi recusandae a provident ipsum libero molestiae excepturi est alias accusantium, nulla id eos repudiandae obcaecati. Debitis fugit atque porro.',
-    date: new Date()
+  @Input() profile: Profile = {
+    user: { _id: '', username: '' },
+    website: '', age: 0, country: '', favoriteBooks: '', interests: '', moreInformation: '', date: new Date()
   };
+  constructor() { }
 
   ngOnInit() {
   }

@@ -1,5 +1,7 @@
 <div class="pt-20 pb-8 flex flex-col items-center h-auto bg-none">
-  <app-main-prompt></app-main-prompt>
-  <app-main-chronometer></app-main-chronometer>
-  <app-text-editor></app-text-editor>
+  <app-main-prompt (promptChanged)="promptChangedHandler($event)"
+    (promptImageChanged)="promptImageChangedHandler($event)"></app-main-prompt>
+  <app-main-chronometer [hasPrompt]="hasPrompt" (countdownFinished)="countDownFinished()"></app-main-chronometer>
+  <app-text-editor *ngIf="hasPrompt" (textSubmitted)="textSubmitted($event)" (textChanged)="textChanged($event)">
+  </app-text-editor>
 </div>

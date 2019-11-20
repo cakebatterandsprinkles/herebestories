@@ -37,7 +37,7 @@ router.post('/', [
   check('lastName', 'Error: Last name is required')
   .not()
   .isEmpty(),
-  check('userName', 'Error: User name is required')
+  check('username', 'Error: User name is required')
   .not()
   .isEmpty(),
   check('email', 'Please enter a valid e-mail address')
@@ -59,7 +59,7 @@ router.post('/', [
     firstName,
     lastName,
     email,
-    userName,
+    username,
     password
   } = req.body;
 
@@ -81,7 +81,7 @@ router.post('/', [
       firstName,
       lastName,
       email,
-      userName,
+      username,
       password,
     });
 

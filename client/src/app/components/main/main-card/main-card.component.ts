@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Card } from '../../../_models/Card';
+import { PostService } from 'src/app/_services/post.service';
 
 @Component({
   selector: 'app-main-card',
@@ -9,19 +10,27 @@ import { Card } from '../../../_models/Card';
 export class MainCardComponent implements OnInit {
   chosenImage: string;
   chosenUrl: string;
-  chosenLikeImg: string;
-  likeCount = 0;
+
+  constructor(private postService: PostService) {
+
+  }
 
   @Input() card: Card;
 
 
   onClick() {
-    if (this.chosenLikeImg === '/assets/images/heart-empty.png') {
-      this.chosenLikeImg = '/assets/images/heart-full.png';
-      this.likeCount++;
-    } else if (this.chosenLikeImg === '/assets/images/heart-full.png') {
-      this.chosenLikeImg = '/assets/images/heart-empty.png';
-      this.likeCount--;
+    if (!this.card.liked) {
+      this.card.likes++;
+      this.card.liked = true;
+      this.postService.like(this.card.id).subscribe(count => {
+        this.card.likes = count;
+      });
+    } else {
+      this.card.likes--;
+      this.card.liked = false;
+      this.postService.unlike(this.card.id).subscribe(count => {
+        this.card.likes = count;
+      });
     }
   }
 
@@ -40,6 +49,5 @@ export class MainCardComponent implements OnInit {
     const num = Math.floor(Math.random() * images.length);
     this.chosenImage = images[num];
     this.chosenUrl = `/assets/images/${this.chosenImage}.png`;
-    this.chosenLikeImg = `/assets/images/heart-empty.png`;
   }
 }

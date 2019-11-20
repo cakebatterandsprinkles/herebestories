@@ -27,19 +27,28 @@ const routes: Routes = [
     component: LoginComponent
   }, {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
   }, {
     path: 'write',
-    component: WriteComponent
+    component: WriteComponent,
+    canActivate: [AuthGuard]
+  }, {
+    path: 'profile/:id',
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
   }, {
     path: 'profile',
-    component: ProfileComponent
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
   }, {
     path: 'settings',
-    component: SettingsComponent
+    component: SettingsComponent,
+    canActivate: [AuthGuard]
   }, {
-    path: 'read',
-    component: ReadComponent
+    path: 'read/:id',
+    component: ReadComponent,
+    canActivate: [AuthGuard]
   }, {
     path: '**',
     component: Notfound404Component

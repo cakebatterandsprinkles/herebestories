@@ -36,16 +36,16 @@ import { MainPromptComponent } from './components/main/main-prompt/main-prompt.c
 import { MainChronometerComponent } from './components/main/main-chronometer/main-chronometer.component';
 import { MainPaginationComponent } from './components/main/main-pagination/main-pagination.component';
 import { MainWritingContentComponent } from './components/main/main-writing-content/main-writing-content.component';
-import { MainCountrySelectComponent } from './components/main/main-country-select/main-country-select.component';
 import { MainProfileInfoComponent } from './components/main/main-profile-info/main-profile-info.component';
 import { Notfound404Component } from './components/pages/notfound404/notfound404.component';
 import { NotFoundContentComponent } from './components/not-found/not-found-content/not-found-content.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarSideComponent } from './components/landing/navbar-side/navbar-side.component';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { MainNavbarSideComponent } from './components/main/main-navbar-side/main-navbar-side.component';
+import { MainReadContentComponent } from './components/main/main-read-content/main-read-content.component';
 
 @NgModule({
   declarations: [
@@ -80,17 +80,18 @@ import { MainNavbarSideComponent } from './components/main/main-navbar-side/main
     MainChronometerComponent,
     MainPaginationComponent,
     MainWritingContentComponent,
-    MainCountrySelectComponent,
     MainProfileInfoComponent,
     Notfound404Component,
     NotFoundContentComponent,
     NavbarSideComponent,
-    MainNavbarSideComponent
+    MainNavbarSideComponent,
+    MainReadContentComponent
   ],
   imports: [
     BrowserModule,
     CountdownModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     QuillModule.forRoot(),

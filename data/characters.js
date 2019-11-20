@@ -1,1 +1,1 @@
-module.exports = ['a dragon', 'a frog', 'a pilot', 'a chef'];
+module.exports = ['a dragon', 'a frog', 'a pilot', 'a chef', 'a straight-A student', 'an artist', 'a yoga instructor', 'a K-pop star', 'a dancer', 'a ballerina', 'a lion', 'a gamer', 'a former CEO', 'a computer scientist', 'a puppy', 'a gecko', ];

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Card } from 'src/app/_models/Card';
+import { PostService } from 'src/app/_services/post.service';
 
 @Component({
   selector: 'app-main-profile-page',
@@ -8,14 +9,24 @@ import { Card } from 'src/app/_models/Card';
 })
 export class MainProfilePageComponent implements OnInit {
 
-  cards: Card[] = Array(12).fill({
-    prompt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quae!',
-    story: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsam ab temporibus corrupti quos dolorem ipsa id, beatae voluptatibus ut cupiditate explicabo alias ea laborum maiores sequi deleniti odio! Amet harum asperiores velit quaerat, consectetur aut minima ipsum distinctio molestias rem recusandae at accusamus inventore eum blanditiis ipsam, hic eligendi!',
-    username: 'cakebatterandsprinkles',
-    likes: 0,
-    date: new Date()
-  });
-  constructor() { }
+  profileUserId = '';
+
+  @Input()
+  set userid(userid: string) {
+    if (userid) {
+      this.profileUserId = userid;
+      this.postService.listForUser(userid, 0).subscribe(posts => {
+        this.cards = posts.map(post => ({
+          id: post._id, liked: post.likes.filter(l => l.user === userid).length > 0,
+          story: post.text, prompt: post.promptText, username: post.user.username,
+          likes: post.likeCount, date: post.date, userid: post.user._id
+        }));
+      });
+    }
+  }
+
+  cards: Card[] = [];
+  constructor(private postService: PostService) { }
 
   ngOnInit() {
   }

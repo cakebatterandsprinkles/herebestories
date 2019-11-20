@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,11 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./text-editor.component.scss']
 })
 export class TextEditorComponent implements OnInit {
+
+  @Output() textSubmitted: EventEmitter<string> = new EventEmitter();
+  @Output() textChanged: EventEmitter<string> = new EventEmitter();
+
+  html: string;
 
   editorForm: FormGroup;
 
@@ -17,6 +22,11 @@ export class TextEditorComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.editorForm.get('editor').value);
+    this.textSubmitted.emit(this.html);
+  }
+
+  onContentChanged(event) {
+    this.html = event.html;
+    this.textChanged.emit(event.html);
   }
 }
