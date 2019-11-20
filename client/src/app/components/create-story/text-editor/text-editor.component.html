@@ -1,4 +1,4 @@
-<div class="h-full px-4">
+<div class="h-full px-4 mb-12">
   <form [formGroup]="editorForm" (ngSubmit)="onSubmit()" class="w-full">
     <div class="w-full">
       <quill-editor (onContentChanged)="onContentChanged($event)" formControlName="editor"
