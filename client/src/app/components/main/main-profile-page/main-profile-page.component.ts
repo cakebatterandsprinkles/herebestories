@@ -8,7 +8,8 @@ import { PostService } from 'src/app/_services/post.service';
   styleUrls: ['./main-profile-page.component.scss']
 })
 export class MainProfilePageComponent implements OnInit {
-
+  cards: Card[] = [];
+  constructor(private postService: PostService) { }
   profileUserId = '';
 
   @Input()
@@ -18,15 +19,12 @@ export class MainProfilePageComponent implements OnInit {
       this.postService.listForUser(userid, 0).subscribe(posts => {
         this.cards = posts.map(post => ({
           id: post._id, liked: post.likes.filter(l => l.user === userid).length > 0,
-          story: post.text, prompt: post.promptText, username: post.user.username,
+          story: post.text, prompt: post.promptImages.length ? 'Image Prompt' : post.promptText, username: post.user.username,
           likes: post.likeCount, date: post.date, userid: post.user._id
         }));
       });
     }
   }
-
-  cards: Card[] = [];
-  constructor(private postService: PostService) { }
 
   ngOnInit() {
   }

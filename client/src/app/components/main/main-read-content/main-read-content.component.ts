@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Card } from 'src/app/_models/Card';
 import { PostService } from 'src/app/_services/post.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-read-content',
@@ -10,8 +11,9 @@ import { PostService } from 'src/app/_services/post.service';
 export class MainReadContentComponent implements OnInit {
   images: string[];
 
-  constructor(private postService: PostService) {
-  }
+  constructor(
+    private router: Router,
+    private postService: PostService) { }
 
   card: Card = {
     prompt: '',
@@ -40,7 +42,6 @@ export class MainReadContentComponent implements OnInit {
     }
   }
 
-
   onClick() {
     if (!this.card.liked) {
       this.card.likes++;
@@ -57,6 +58,9 @@ export class MainReadContentComponent implements OnInit {
     }
   }
 
+  backToDashboard($event) {
+    this.router.navigate(['/dashboard']);
+  }
 
   ngOnInit() {
   }

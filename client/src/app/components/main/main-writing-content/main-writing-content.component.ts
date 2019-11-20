@@ -43,7 +43,10 @@ export class MainWritingContentComponent implements OnInit {
 
   submit() {
     this.postService.write(this.textHtml, this.prompt ?
-      `Character: ${this.prompt.character}, Age: ${this.prompt.age}, Feature: ${this.prompt.feature}, Dilemma: ${this.prompt.dilemma}`
+      `Character: ${this.prompt.character},
+      Age: ${this.prompt.age},
+      Feature: ${this.prompt.feature},
+      Dilemma: ${this.prompt.dilemma}`
       : '',
       this.promptImages ? this.promptImages.join(',') : '').subscribe(
         data => {
