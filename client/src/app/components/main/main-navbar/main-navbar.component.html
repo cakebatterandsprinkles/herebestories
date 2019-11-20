@@ -17,18 +17,19 @@
         <div class="pr-6 hover:font-bold focus:shadow-outline focus:outline-none">
           <a routerLink="/profile" routerLinkActive="text-pink-500 font-bold">Profile</a>
         </div>
-        <div class="pr-2 hover:font-bold focus:shadow-outline focus:outline-none">
+        <div class="pr-6 hover:font-bold focus:shadow-outline focus:outline-none">
           <a routerLink="/settings" routerLinkActive="text-pink-500 font-bold">Settings</a>
+        </div>
+        <div class="pr-2 hover:font-bold focus:shadow-outline focus:outline-none">
+          <a routerLink="/login" (click)="handleLogout()">Logout</a>
         </div>
       </div>
       <div class="flex w-full h-2 flex-row">
-        <div class="h-2 bg-pink-500 box rounded-l-lg"><a routerLink="/dashboard"
-            routerLinkActive="text-pink-500 font-bold"></a></div>
-        <div class="h-2 bg-orange-500 box"><a routerLink="/write" routerLinkActive="text-pink-500 font-bold"></a></div>
-        <div class="h-2 bg-yellow-500 box"><a routerLink="/profile" routerLinkActive="text-pink-500 font-bold"></a>
-        </div>
-        <div class="h-2 bg-green-500 box rounded-r-lg"><a routerLink="/settings"
-            routerLinkActive="text-pink-500 font-bold"></a></div>
+        <div class="h-2 bg-pink-500 box rounded-l-lg"></div>
+        <div class="h-2 bg-orange-500 box"></div>
+        <div class="h-2 bg-yellow-500 box"></div>
+        <div class="h-2 bg-green-500 box"></div>
+        <div class="h-2 bg-blue-500 box rounded-r-lg"></div>
       </div>
     </div>
   </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/_services/authentication.service';
 
 
 @Component({
@@ -7,11 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-navbar.component.scss']
 })
 export class MainNavbarComponent implements OnInit {
+  constructor(private authenticationService: AuthenticationService) { }
   open = false;
   onClick() {
     this.open = !this.open;
   }
-  constructor() { }
+
+  handleLogout() {
+    this.authenticationService.logout();
+    location.reload();
+  }
 
   ngOnInit() {
   }
