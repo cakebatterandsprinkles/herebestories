@@ -8,6 +8,8 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
   templateUrl: './main-settings.component.html',
   styleUrls: ['./main-settings.component.scss']
 })
+
+
 export class MainSettingsComponent implements OnInit {
 
   profile: Profile;

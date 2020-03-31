@@ -41,7 +41,7 @@ router.post('/', [
         .status(401)
         .json({
           errors: [{
-            msg: "invalid credentials"
+            msg: "Invalid credentials"
           }]
         });
     }
@@ -55,7 +55,7 @@ router.post('/', [
         .status(401)
         .json({
           errors: [{
-            msg: "invalid credentials"
+            msg: "Invalid credentials"
           }]
         });
     }
